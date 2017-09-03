@@ -7,14 +7,17 @@ export default ({ config }) => resource({
 
 	/** GET / - List all entities */
 	index({ body }, res) {
-		res.json(body);
+		res.json({
+			'result': 'hello'
+		});
 	},
 	/** POST / - Default entity */
 	create({ body }, res) {
 		
-		res.json({
-			'result': 'hello'
-		});
+		
+
+		var response = 'Hello this is the webhook';
+		res.json({ "speech": response, "displayText": response });
 		
 	}
 
