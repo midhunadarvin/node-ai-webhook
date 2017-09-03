@@ -1,0 +1,6 @@
+{
+	"port": 8080,
+	"bodyLimit": "100kb",
+	"corsHeaders": ["Link"],
+	"aiAccessToken": "a718b5d028d347178d5de1c54c8b4192"
+}
