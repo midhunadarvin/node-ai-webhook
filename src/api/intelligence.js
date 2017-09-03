@@ -13,12 +13,24 @@ export default ({ config }) => resource({
 	},
 	/** POST / - Default entity */
 	create({ body }, res) {
-		
-		
+		var response;
 
-		var response = 'Hello this is the webhook';
+		switch(body.result.metadata.intentName) {
+			case 'email': {
+				response = 'Sending Email';
+				break;
+			}
+			case 'weather': {
+				response = 'Fetching weather data';
+				break;
+			}
+			default : {
+				response = 'Hello this is the webhook';
+				break;
+			}
+		}
 		res.json({ "speech": response, "displayText": response });
-		
+
 	}
 
 });
