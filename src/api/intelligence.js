@@ -25,7 +25,7 @@ export default ({ config }) => resource({
 				break;
 			}
 			default : {
-				response = 'Hello this is the webhook';
+				response = body.result.fulfillment.speech;
 				break;
 			}
 		}
